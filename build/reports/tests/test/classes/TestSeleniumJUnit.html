@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5m26.91s</div>
+<div class="counter">19.443s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,15 +73,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="writeOnTextBox"></a>
-<h3 class="failures">writeOnTextBox</h3>
+<a name="selectDropdown"></a>
+<h3 class="failures">selectDropdown</h3>
 <span class="code">
-<pre>org.openqa.selenium.TimeoutException: TimedPromise timed out after 300000 ms
+<pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;select id=&quot;cars&quot; name=&quot;cars&quot;&gt; is not clickable at point (373,607) because another element &lt;footer&gt; obscures it
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-R9C9D89', ip: '192.168.0.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+System info: host: 'samia-laptop', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.11.0-27-generic', java.version: '1.8.0_301'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 91.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210823123856, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 11724, moz:profile: C:\Users\mahmu\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ebe11212-95ea-417f-8e95-07088483f25e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 91.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210823123856, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9671, moz:profile: /tmp/rust_mozprofile2jFdDL, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.11.0-27-generic, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bd18446-9d35-4de7-93c9-443a4f7da10d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -92,8 +92,11 @@ Session ID: ebe11212-95ea-417f-8e95-07088483f25e
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at TestSeleniumJUnit.writeOnTextBox(TestSeleniumJUnit.java:32)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:311)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:187)
+	at TestSeleniumJUnit.selectDropdown(TestSeleniumJUnit.java:82)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -161,8 +164,8 @@ Session ID: ebe11212-95ea-417f-8e95-07088483f25e
 </tr>
 </thead>
 <tr>
-<td class="failures">writeOnTextBox</td>
-<td class="failures">5m26.91s</td>
+<td class="failures">selectDropdown</td>
+<td class="failures">19.443s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -170,13 +173,13 @@ Session ID: ebe11212-95ea-417f-8e95-07088483f25e
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>1630748410468	geckodriver	INFO	Listening on 127.0.0.1:16279
-1630748411069	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;--headed&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\mahmu\\AppData\\Local\\Temp\\rust_mozprofileQhxtr0&quot;
-1630748412786	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at C:\\Users\\mahmu\\AppData\\Local\\Temp\\rust_mozprofileQhxtr0\\search.json.mozlz4&quot;, (void 0)))
-1630748421848	Marionette	INFO	Listening on port 52753
-1630748422346	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-Sep 04, 2021 3:40:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+<pre>1630861776606	geckodriver	INFO	Listening on 127.0.0.1:12864
+1630861776835	mozrunner::runner	INFO	Running command: &quot;/usr/lib/firefox/firefox&quot; &quot;--marionette&quot; &quot;--headed&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/tmp/rust_mozprofile2jFdDL&quot;
+1630861779994	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at /tmp/rust_mozprofile2jFdDL/search.json.mozlz4&quot;, (void 0)))
+1630861785478	Marionette	INFO	Listening on port 35467
+1630861785677	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Sep 05, 2021 11:09:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 </pre>
 </span>
@@ -189,7 +192,7 @@ INFO: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 4-Sep-2021 3:45:53 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at Sep 5, 2021 11:09:56 PM</p>
 </div>
 </div>
 </body>
